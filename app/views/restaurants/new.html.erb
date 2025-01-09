@@ -1,0 +1,40 @@
+<h1>New Restaurant</h1>
+
+<%= form_with(model: @restaurant, local: true) do |form| %>
+  <% if @restaurant.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@restaurant.errors.count, "error") %> prohibited this restaurant from being saved:</h2>
+      <ul>
+        <% @restaurant.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, placeholder: "Enter the restaurant's name" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :address %>
+    <%= form.text_field :address, placeholder: "Enter the restaurant's address" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :phone_number %>
+    <%= form.telephone_field :phone_number, placeholder: "Enter the phone number" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description, placeholder: "Write a short description", rows: 5 %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "Create Restaurant" %>
+  </div>
+<% end %>
+
+<%= link_to "Back to Restaurants", restaurants_path %>

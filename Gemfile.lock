@@ -96,6 +96,8 @@ GEM
     drb (2.2.1)
     error_highlight (0.7.0)
     erubi (1.13.1)
+    faker (3.5.1)
+      i18n (>= 1.8.11, < 2)
     globalid (1.2.1)
       activesupport (>= 6.1)
     i18n (1.14.6)
@@ -213,6 +215,9 @@ GEM
       rspec-support (~> 3.13)
     rspec-support (3.13.2)
     securerandom (0.4.1)
+    simple_form (5.3.1)
+      actionpack (>= 5.2)
+      activemodel (>= 5.2)
     sprockets (4.2.1)
       concurrent-ruby (~> 1.0)
       rack (>= 2.2.4, < 4)
@@ -255,12 +260,14 @@ DEPENDENCIES
   bootsnap
   debug
   error_highlight (>= 0.4.0)
+  faker
   importmap-rails
   jbuilder
   puma (>= 5.0)
   rails (~> 7.1.5, >= 7.1.5.1)
   rails-controller-testing
   rspec-rails
+  simple_form
   sprockets-rails
   sqlite3 (>= 1.4)
   stimulus-rails
